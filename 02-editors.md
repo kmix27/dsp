@@ -60,7 +60,7 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 
 What terminal editor will you use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+I'll be using nano,  I looked at all three options, and while the customization capability is attractive in the other two, I feel as though a flatter learning curve will benefit me for the purpose of this program.  I am already comfortable working in sublime text, and will mostly work from there.
 
 --
 
@@ -68,6 +68,5 @@ What terminal editor will you use? How did you make your decision?
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
-
+Sublime text 3.  There is so much to love.  the syntax highlighting is great,  there is a huge repository of external packages which are easily accesible through package control, which add functionality and customization with ease. some of my favorite are:  bracketHighlighter, html/css/js/prettify, anaconda, material theme
  
