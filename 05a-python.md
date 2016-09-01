@@ -12,7 +12,7 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+Tuples are immutable, meaning you cannot change a tuple once it's been defined.  Lists are mutable and can be added to, removed from, sorted, inserted into, and further changed once they have been defined.  Generally you will use one or the other based on this mutability or lack thereof.  Because they are immutable tuples are much faster to iterate through, because python doesn't need to concern itself with the potential for values to change.  Syntactically you define a tuple as simply an assortment of comma separated values alone or enclosed within round brackets, lists are defined as an assortment of comma separated values within square brackets.  Both are an assortment of comma separated values that you can do something with.  Only tuples can be used as keys in dictionaries.  This is done to dramatically reduce the complexity of lookup functions. efficient lookup funtions operate by hashing the values and comparing hashed lookup value with the hashed key values, and lists do not provide a valid hash method.  If lists could be used as keys, every lookup would require searching sequentially through every value in the list, which would quickly become unweildy given large datasets.
 
 ---
 
