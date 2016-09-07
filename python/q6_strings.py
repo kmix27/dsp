@@ -8,23 +8,17 @@ def donuts(count):
     form 'Number of donuts: <count>', where <count> is the number
     passed in. However, if the count is 10 or more, then use the word
     'many' instead of the actual count.
-
-    >>> donuts(4)
-    'Number of donuts: 4'
-    >>> donuts(9)
-    'Number of donuts: 9'
-    >>> donuts(10)
-    'Number of donuts: many'
-    >>> donuts(99)
-    'Number of donuts: many'
     """
-    raise NotImplementedError
+    text = 'Number of donuts: '
+    if count < 10:
+        return text + str(count)
+    return text + 'many'
 
 
 def both_ends(s):
     """
     Given a string s, return a string made of the first 2 and the last
-    2 chars of the original string, so 'spring' yields 'spng'.
+    2 chars of the original stri ng, so 'spring' yields 'spng'.
     However, if the string length is less than 2, return instead the
     empty string.
 
@@ -37,7 +31,10 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
-    raise NotImplementedError
+    if len(s) > 2:
+        return s[:2] + s[-2:]
+    else:
+        return ''
 
 
 def fix_start(s):
@@ -56,7 +53,11 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
-    raise NotImplementedError
+    letters = list(s)
+    first = letters[0]
+    new = ['*' if l == first else l for l in letters]
+    new = list(first) + new[:0] + new[1:]
+    print(''.join(new))
 
 
 def mix_up(a, b):
@@ -74,7 +75,7 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
-    raise NotImplementedError
+    return b[:2] + a[2:] + ' ' + a[:2] + b[2:]
 
 
 def verbing(s):
@@ -91,7 +92,13 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
-    raise NotImplementedError
+    l = len(s)
+    last3 = s[l - 3:]
+    if l <= 3:
+        return s
+    if last3 == 'ing':
+        return s + 'ly'
+    return s + 'ing'
 
 
 def not_bad(s):
@@ -111,7 +118,11 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
-    raise NotImplementedError
+    notIndex = s.find('not')
+    badIndex = s.find('bad')
+    if (badIndex > notIndex):
+        return s[:notIndex] + 'good' + s[(badIndex + 3):]
+    return s
 
 
 def front_back(a, b):
@@ -130,4 +141,5 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
-    raise NotImplementedError
+    halfLenA, halfLenB = (len(a) + 1) // 2, (len(b) + 1) // 2
+    return a[:halfLenA] + b[:halfLenB] + a[halfLenA:] + b[halfLenB:]
