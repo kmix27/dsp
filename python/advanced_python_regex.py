@@ -1,5 +1,6 @@
 # we're going to use pandas here because it's awesome
 import pandas as pd
+import re
 # first we'll create a data frame from our csv
 data = pd.read_csv('faculty.csv')
 df = pd.DataFrame(data)
