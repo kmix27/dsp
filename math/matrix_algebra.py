@@ -91,8 +91,7 @@ def multMatrix(m1,m2):
 		print(x*y)
 	else:
 		print('Undefined')
-	# else:
-		# print(x * y)
+
 multMatrix(B,A)
 
 print('3.5 BA^T:')
