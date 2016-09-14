@@ -28,6 +28,15 @@ cat fileName(s) -- print file contents directly to the terminal, input multiple 
 rmdir directoryName(s) -- remove directory directory must be empty or this will error
 rm -rf directoryName(s) -- recursive delete directory -- remove directory and all of the files/directories it contains 
 man + command -- pull up documentation for the command- exit documentation with q
+up and down arrows -- cycles through commands,  up starts with most recent down starts with first
+history -- numbered list of commands
+use ctrl + r to search through history for text string
+! + abbreviation -- runs the last command you ran with that abbreviation
+above + :p  prints the command that would run through bang bang instead of running it, adds to history so it can be executed via a !!
+!! --runs the last command executed
+! +number where number is the index in the history - runs that command
+^f^F  sort of like edit>undo
+
 
 
 
